@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg,rgb(176, 188, 254), rgb(253, 185, 224));
+    color:#fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input,
+form button {
+    padding:.5rem;
+    font-size:1.5rem;
+    color:rgb(126, 143, 240);
+    background-color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+form button {
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;  
+}
+form button:hover {
+    color: rgb(253, 188, 254);
+    text-shadow:0 0 5px rgba(176, 188, 254,.5);
+}
+form input:focus {
+    outline:none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255,255,.7);
+}
+
+.empty-notice {
+    background-color: red;
+}
+
+/* list item style */
+.todo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-list {
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.todo {
+    display: flex;
+    list-style: none;
+    background-color: #fff;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.todo-item {
+    flex: 1;
+    color:rgb(126, 143, 240);
+    padding: 0 .5em;
+}
+.completedbtn,
+.trashbtn {
+    border:none;
+    color: rgb(172, 173, 193);
+    background-color:#fff;
+    font-size: 1rem;
+    padding:.5rem;
+    cursor: pointer;
+
+}
+.trashbtn {
+    color: rgb(172, 173, 193);
+}
+
+.fa-check-circle,
+.fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+.fall {
+    transform: translateX(8rem);
+    transition: all .2s ease-out;
+    opacity: 0;
+}
+
+/* filter selector */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    font-size: .8rem;
+    
+}
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color:rgb(126, 143, 240);
+    top: 0%;
+    right: 0;  
+    padding: 1em;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.select:hover::after {
+    background-color: rgb(253, 188, 254);
+    text-shadow:0 0 5px rgba(176, 188, 254,.5);
+}
+select {
+    appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    color: rgb(126, 143, 240);
+    width: 10rem;
+    cursor: pointer;
+    font-size: .8rem;
+    padding: .8rem;
+}
+
+
+
+
